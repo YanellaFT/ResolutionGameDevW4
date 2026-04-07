@@ -4,4 +4,4 @@ tilemap = layer_tilemap_get_id("tile_collision");
 
 door = layer_tilemap_get_id("tile_move");
 
-coin = layer_tilemap_get_id("Instances");
+points = 0;
