@@ -13,5 +13,10 @@ if (place_meeting(x, y, door) ) {
 if (_hor != 0 or _ver != 0){
 	if (_hor <  0) sprite_index = spr_player_left;
 	else if (_hor > 0) sprite_index = spr_player_right;
-	else sprite_index = spr_player_normal;
+	else sprite_index = spr_player_normal_sit;
+}
+else {
+	if (sprite_index == spr_player_normal) sprite_index = spr_player_normal_sit;
+	else if (sprite_index == spr_player_right) sprite_index = spr_player_right_sit;
+	else if (sprite_index == spr_player_left) sprite_index = spr_player_left_sit;
 }
