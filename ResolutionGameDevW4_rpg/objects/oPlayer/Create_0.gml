@@ -13,3 +13,5 @@ top = layer_tilemap_get_id("tile_room5");
 
 battery = 10;
 damage = 1;
+
+facing = 0;

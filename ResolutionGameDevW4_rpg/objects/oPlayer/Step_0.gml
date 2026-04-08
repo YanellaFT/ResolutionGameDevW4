@@ -20,9 +20,18 @@ if (_hor != 0 or _ver != 0){
 	if (_hor <  0) sprite_index = spr_player_left;
 	else if (_hor > 0) sprite_index = spr_player_right;
 	else sprite_index = spr_player_normal;
+	
+	facing =  point_direction(0, 0, _hor, _ver);
 }
 else {
 	if (sprite_index == spr_player_normal) sprite_index = spr_player_normal_sit;
 	else if (sprite_index == spr_player_right) sprite_index = spr_player_right_sit;
 	else if (sprite_index == spr_player_left) sprite_index = spr_player_left_sit;
+	
 }
+
+if (keyboard_check_pressed(vk_space)) {
+	var _inst = instance_create_depth(x, y, depth, oAttack);
+	_inst.image_angle = facing;
+	_inst.damage *= damage;
+}	
