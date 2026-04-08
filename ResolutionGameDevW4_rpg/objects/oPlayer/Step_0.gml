@@ -7,13 +7,19 @@ if (place_meeting(x, y, door) ) {
 	if (room == Room1) room_goto_next();
 	else room_goto_previous();
 }
+/*
+global.points = 0;
+global.battery_lvl = 10;
 
+if (place_meeting(x,y,bl) and points >= 2) {
+	battery_lvl += 3;
+}*/
 
 
 if (_hor != 0 or _ver != 0){
 	if (_hor <  0) sprite_index = spr_player_left;
 	else if (_hor > 0) sprite_index = spr_player_right;
-	else sprite_index = spr_player_normal_sit;
+	else sprite_index = spr_player_normal;
 }
 else {
 	if (sprite_index == spr_player_normal) sprite_index = spr_player_normal_sit;
