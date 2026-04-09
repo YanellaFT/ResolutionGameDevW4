@@ -1,12 +1,34 @@
+if (instance_exists(oDialog)) exit;
+
+if (keyboard_check_pressed(vk_space)) {
+	create_dialog([
+	{
+		msg: "testtt"
+	}
+	])
+}
+
+
 var _hor = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 var _ver = keyboard_check(ord("S")) - keyboard_check(ord("W"));
 
 move_and_collide(_hor * move_speed, _ver * move_speed, tilemap);
 
 if (place_meeting(x, y, door) ) {
-	if (room == Room1) room_goto_next();
-	else room_goto_previous();
+	if (points >=3) {
+		 room_goto(Room2);
+		points = points - 3;
+	}
+	else {
+		room_goto(Room1);
+	}
 }
+/*
+if (place_meeting(x,y,bl)) {
+	if (points >= 2) {
+		battery += 5;
+	}
+}*/
 /*
 global.points = 0;
 global.battery_lvl = 10;
