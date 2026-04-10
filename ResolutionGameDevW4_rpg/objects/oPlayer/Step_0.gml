@@ -15,9 +15,9 @@ var _ver = keyboard_check(ord("S")) - keyboard_check(ord("W"));
 move_and_collide(_hor * move_speed, _ver * move_speed, tilemap);
 
 if (place_meeting(x, y, door) ) {
-	if (points >=3) {
+	if (points >= 14) {
 		 room_goto(Room2);
-		points = points - 3;
+		points = 0;
 	}
 	else {
 		room_goto(Room1);

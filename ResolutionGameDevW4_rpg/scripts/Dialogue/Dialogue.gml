@@ -11,6 +11,6 @@ help_dialog = [
 msg: "Use WASD to move. Press SPACE to interact/attack."
 },
 {
-	msg: " Collect 3+ keys to enter your house to rest and regain battery!"
+	msg: " Collect all the keys to enter your house to rest and regain battery!"
 }
 ]
