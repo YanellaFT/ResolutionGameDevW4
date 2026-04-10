@@ -5,3 +5,12 @@ function create_dialog(_messages){
 	_inst.messages = _messages;
 	_inst.current_message = 0;
 }
+
+help_dialog = [
+{
+msg: "Use WASD to move. Press SPACE to interact/attack."
+},
+{
+	msg: " Collect 3+ keys to enter your house to rest and regain battery!"
+}
+]

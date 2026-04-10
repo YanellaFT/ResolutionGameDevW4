@@ -1,12 +1,12 @@
 if (instance_exists(oDialog)) exit;
-
+/*
 if (keyboard_check_pressed(vk_space)) {
 	create_dialog([
 	{
 		msg: "testtt"
 	}
 	])
-}
+}*/
 
 
 var _hor = keyboard_check(ord("D")) - keyboard_check(ord("A"));
